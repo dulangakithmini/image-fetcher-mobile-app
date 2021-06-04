@@ -6,7 +6,9 @@ void main() {
   // Create a text widget to show some text on the screen
   var app = MaterialApp(
     home: Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Let\'s see some images!'),
+      ),
     ),
   );
 
