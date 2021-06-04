@@ -13,7 +13,7 @@ void main() {
         onPressed: () {
           print('Hi');
         },
-        child: Text('+'),
+        child: Icon(Icons.add),
       ),
     ),
   );
