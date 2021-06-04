@@ -13,6 +13,7 @@ void main() {
         onPressed: () {
           print('Hi');
         },
+        child: Text('+'),
       ),
     ),
   );
