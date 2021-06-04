@@ -9,6 +9,11 @@ void main() {
       appBar: AppBar(
         title: Text('Let\'s see some images!'),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('Hi');
+        },
+      ),
     ),
   );
 
