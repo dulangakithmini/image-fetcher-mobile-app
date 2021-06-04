@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 void main() {
   // Create a text widget to show some text on the screen
   var app = MaterialApp(
-    home: Scaffold(),
+    home: Scaffold(
+      appBar: AppBar(),
+    ),
   );
 
 // Take that widget and get it on the screen
