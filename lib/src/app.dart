@@ -26,7 +26,8 @@ class AppState extends State<App> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            print('Hi');
+            // Inncrement the counter variable on FloatingActionButton press
+            counter += 1;
           },
           child: Icon(Icons.add),
         ),
