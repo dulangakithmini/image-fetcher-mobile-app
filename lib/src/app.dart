@@ -14,6 +14,9 @@ class App extends StatefulWidget {
 
 // Create AppState class extending State<App>
 class AppState extends State<App> {
+  // Add instance variables that represent the data that is going to change over time
+  int counter = 0;
+
   // Define a build method that returns the widgets that this widget will show
   Widget build(context) {
     return MaterialApp(
