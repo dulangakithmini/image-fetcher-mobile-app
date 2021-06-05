@@ -27,7 +27,12 @@ class AppState extends State<App> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             // Inncrement the counter variable on FloatingActionButton press
-            counter += 1;
+            // counter += 1;
+
+            // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
+            setState(() {
+              counter += 1;
+            });
           },
           child: Icon(Icons.add),
         ),
