@@ -8,7 +8,6 @@ class App extends StatefulWidget {
   State<StatefulWidget> createState() {
     // Return an instance of AppState
     return AppState();
-    throw UnimplementedError();
   }
 }
 
@@ -26,7 +25,7 @@ class AppState extends State<App> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            // Inncrement the counter variable on FloatingActionButton press
+            // Increment the counter variable on FloatingActionButton press
             // counter += 1;
 
             // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
@@ -36,6 +35,8 @@ class AppState extends State<App> {
           },
           child: Icon(Icons.add),
         ),
+        //Display the button click count
+        body: Text('Button is clicked $counter times!'),
       ),
     );
   }
