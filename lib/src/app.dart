@@ -1,8 +1,12 @@
 // Import flutter helper library
 import 'package:flutter/material.dart';
 
+// import 'my_column.dart';
+
 // Create App class extending StatefulWidget in order to refactor Stateless into Stateful
+
 class App extends StatefulWidget {
+  // final int increment =5;
   // Implement createState
   @override
   State<StatefulWidget> createState() {
@@ -24,21 +28,23 @@ class AppState extends State<App> {
           title: Text('Let\'s see some images!'),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            // Increment the counter variable on FloatingActionButton press
-            // counter += 1;
-
-            // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
-            setState(() {
-              counter += 1;
-            });
-          },
+          onPressed: incrementCounter,
           child: Icon(Icons.add),
         ),
         //Display the button click count
         body: Text('Button is clicked $counter times!'),
       ),
     );
+  }
+
+  void incrementCounter() {
+    // Increment the counter variable on FloatingActionButton press
+    // counter += 1;
+
+    // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
+    setState(() {
+      counter += 1;
+    });
   }
 }
 
@@ -59,5 +65,19 @@ class AppState extends State<App> {
 //         ),
 //       ),
 //     );
+//   }
+// }
+
+// class App2 extends StatefulWidget {
+//   const App2({Key? key}) : super(key: key);
+//
+//   @override
+//   _App2State createState() => _App2State();
+// }
+//
+// class _App2State extends State<App2> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container();
 //   }
 // }
