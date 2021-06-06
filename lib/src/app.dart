@@ -18,7 +18,7 @@ class App extends StatefulWidget {
 // Create AppState class extending State<App>
 class AppState extends State<App> {
   // Add instance variables that represent the data that is going to change over time
-  int counter = 0;
+  // int counter = 0;
 
   // Define a build method that returns the widgets that this widget will show
   Widget build(context) {
@@ -28,22 +28,26 @@ class AppState extends State<App> {
           title: Text('Let\'s see some images!'),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: incrementCounter,
+          //Since this is a function calling another function, we don't have to write the outer function
+          // onPressed: () {
+          //   fetchImage();
+          // }
+          onPressed: fetchImage,
           child: Icon(Icons.add),
         ),
         //Display the button click count
-        body: Text('Button is clicked $counter times!'),
+        // body: Text('Button is clicked $counter times!'),
       ),
     );
   }
 
-  void incrementCounter() {
+  void fetchImage() {
     // Increment the counter variable on FloatingActionButton press
     // counter += 1;
 
     // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
     setState(() {
-      counter += 1;
+      // counter += 1;
     });
   }
 }
