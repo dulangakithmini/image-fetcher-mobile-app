@@ -32,6 +32,8 @@ class AppState extends State<App> {
           // onPressed: () {
           //   fetchImage();
           // }
+
+          // Passing a reference to the fetchImage method
           onPressed: fetchImage,
           child: Icon(Icons.add),
         ),
