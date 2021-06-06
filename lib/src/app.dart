@@ -1,7 +1,8 @@
 // Import flutter helper library
 import 'package:flutter/material.dart';
 
-// import 'my_column.dart';
+//Import get from http.dart from http package
+import 'package:http/http.dart' show get;
 
 // Create App class extending StatefulWidget in order to refactor Stateless into Stateful
 
@@ -29,7 +30,8 @@ class AppState extends State<App> {
     counter++;
     // Make a request to json API endpoint using get function
     // Add counter variable as the id of the photo
-    get('http://jsonplaceholder.typicode.com/photos/$counter');
+    get(Uri.dataFromString(
+        'http://jsonplaceholder.typicode.com/photos/$counter'));
 
     // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
     setState(() {
