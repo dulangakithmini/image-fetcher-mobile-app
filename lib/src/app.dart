@@ -25,8 +25,11 @@ class AppState extends State<App> {
     // Increment the counter variable on FloatingActionButton press
     // counter += 1;
 
+    //Increment counter by 1 since photo ids start with 1
+    counter++;
     // Make a request to json API endpoint using get function
-    get('http://jsonplaceholder.typicode.com/photos');
+    // Add counter variable as the id of the photo
+    get('http://jsonplaceholder.typicode.com/photos/$counter');
 
     // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
     setState(() {
