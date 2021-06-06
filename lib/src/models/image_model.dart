@@ -11,4 +11,11 @@ class ImageModel {
     url = parsedJson['url'];
     title = parsedJson['title'];
   }
+
+//  Or
+//  Abbreviated. Not a good practice.
+//   ImageModel.fromJson(Map<String, dynamic> parsedJson)
+//       : id = parsedJson['id'],
+//         url = parsedJson['url'],
+//         title = parsedJson['title'];
 }
