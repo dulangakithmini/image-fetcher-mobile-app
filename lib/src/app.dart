@@ -63,11 +63,11 @@ class AppState extends State<App> {
     var response = await get(Uri.dataFromString(
         'http://jsonplaceholder.typicode.com/photos/$counter'));
     var imageModel = ImageModel.fromJson(json.decode(response.body));
-    images.add(imageModel);
 
     // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
     setState(() {
       // counter += 1;
+      images.add(imageModel);
     });
   }
 }
