@@ -3,7 +3,6 @@ import 'dart:convert';
 
 // Import flutter helper library
 import 'package:flutter/material.dart';
-
 //Import get from http.dart from http package
 import 'package:http/http.dart' show get;
 
@@ -52,6 +51,8 @@ class AppState extends State<App> {
 
   // Make an HTTP request to the outside API, fetch the json for one image and create an instance of the new ImageModel class out of it
   void fetchImage() async {
+    List<ImageModel> images = [];
+
     // Increment the counter variable on FloatingActionButton press
     // counter += 1;
 
@@ -62,6 +63,7 @@ class AppState extends State<App> {
     var response = await get(Uri.dataFromString(
         'http://jsonplaceholder.typicode.com/photos/$counter'));
     var imageModel = ImageModel.fromJson(json.decode(response.body));
+    images.add(imageModel);
 
     // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
     setState(() {
