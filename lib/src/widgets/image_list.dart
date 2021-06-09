@@ -20,7 +20,12 @@ class ImageList extends StatelessWidget {
             width: 1.0,
             style: BorderStyle.solid,
           )),
-          child: Image.network(images[index].url),
+          child: Column(
+            children: [
+              Image.network(images[index].url),
+              Text(images[index].title),
+            ],
+          ),
         );
       },
     );
