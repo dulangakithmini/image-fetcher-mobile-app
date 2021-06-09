@@ -13,7 +13,7 @@ class ImageList extends StatelessWidget {
       itemBuilder: (context, int index) {
         return Container(
           margin: EdgeInsets.all(20.0),
-          padding: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(20.0),
           decoration: BoxDecoration(
               border: Border.all(
             color: Colors.black,
