@@ -61,8 +61,8 @@ class AppState extends State<App> {
     counter++;
     // Make a request to json API endpoint using get function
     // Add counter variable as the id of the photo
-    var response = await get(Uri.dataFromString(
-        'http://jsonplaceholder.typicode.com/photos/$counter'));
+    var response = await get(
+        Uri.parse('http://jsonplaceholder.typicode.com/photos/$counter'));
     var imageModel = ImageModel.fromJson(json.decode(response.body));
 
     // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
