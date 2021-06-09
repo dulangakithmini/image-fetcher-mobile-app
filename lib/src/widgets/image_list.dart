@@ -13,6 +13,7 @@ class ImageList extends StatelessWidget {
       itemBuilder: (context, int index) {
         return Container(
           margin: EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(10.0),
           child: Image.network(images[index].url),
         );
       },
