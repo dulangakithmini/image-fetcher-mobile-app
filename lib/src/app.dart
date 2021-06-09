@@ -27,6 +27,8 @@ class AppState extends State<App> {
   // Add instance variables that represent the data that is going to change over time
   int counter = 0;
 
+  List<ImageModel> images = [];
+
   // Define a build method that returns the widgets that this widget will show
   Widget build(context) {
     return MaterialApp(
@@ -52,8 +54,6 @@ class AppState extends State<App> {
 
   // Make an HTTP request to the outside API, fetch the json for one image and create an instance of the new ImageModel class out of it
   void fetchImage() async {
-    List<ImageModel> images = [];
-
     // Increment the counter variable on FloatingActionButton press
     // counter += 1;
 
