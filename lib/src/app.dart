@@ -1,7 +1,14 @@
+// To get json related functions
+import 'dart:convert';
+
 // Import flutter helper library
 import 'package:flutter/material.dart';
+
 //Import get from http.dart from http package
 import 'package:http/http.dart' show get;
+
+// Import image model
+import 'models/image_model.dart';
 
 // Create App class extending StatefulWidget in order to refactor Stateless into Stateful
 
@@ -54,6 +61,7 @@ class AppState extends State<App> {
     // Add counter variable as the id of the photo
     var response = await get(Uri.dataFromString(
         'http://jsonplaceholder.typicode.com/photos/$counter'));
+    var imageModel = ImageModel.fromJson(json.decode(response.body));
 
     // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
     setState(() {
