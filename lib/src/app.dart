@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 //Import get from http.dart from http package
 import 'package:http/http.dart' show get;
+import 'package:pics/src/widgets/image_list.dart';
 
 // Import image model
 import 'models/image_model.dart';
@@ -44,7 +45,7 @@ class AppState extends State<App> {
           child: Icon(Icons.add),
         ),
         //Display the button click count
-        // body: Text('Button is clicked $counter times!'),
+        body: ImageList(images),
       ),
     );
   }
