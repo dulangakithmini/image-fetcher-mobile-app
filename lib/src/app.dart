@@ -1,6 +1,5 @@
 // Import flutter helper library
 import 'package:flutter/material.dart';
-
 //Import get from http.dart from http package
 import 'package:http/http.dart' show get;
 
@@ -20,24 +19,6 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
   // Add instance variables that represent the data that is going to change over time
   int counter = 0;
-
-  // Make an HTTP request to the outside API, fetch the json for one image and create an instance of the new ImageModel class out of it
-  void fetchImage() {
-    // Increment the counter variable on FloatingActionButton press
-    // counter += 1;
-
-    //Increment counter by 1 since photo ids start with 1
-    counter++;
-    // Make a request to json API endpoint using get function
-    // Add counter variable as the id of the photo
-    get(Uri.dataFromString(
-        'http://jsonplaceholder.typicode.com/photos/$counter'));
-
-    // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
-    setState(() {
-      // counter += 1;
-    });
-  }
 
   // Define a build method that returns the widgets that this widget will show
   Widget build(context) {
@@ -60,6 +41,24 @@ class AppState extends State<App> {
         // body: Text('Button is clicked $counter times!'),
       ),
     );
+  }
+
+  // Make an HTTP request to the outside API, fetch the json for one image and create an instance of the new ImageModel class out of it
+  void fetchImage() async {
+    // Increment the counter variable on FloatingActionButton press
+    // counter += 1;
+
+    //Increment counter by 1 since photo ids start with 1
+    counter++;
+    // Make a request to json API endpoint using get function
+    // Add counter variable as the id of the photo
+    var response = await get(Uri.dataFromString(
+        'http://jsonplaceholder.typicode.com/photos/$counter'));
+
+    // Call the setState() when AppState class's data changes. Modify the data inside the function that is passed to setState()
+    setState(() {
+      // counter += 1;
+    });
   }
 }
 
